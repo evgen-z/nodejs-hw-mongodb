@@ -2,8 +2,8 @@ import express from "express";
 import pino from "pino-http";
 import cors from "cors";
 import dotenv from "dotenv";
-import { getEnvVar } from "./utils/getEnvVar";
-import { getAllContacts, getContactbyId } from "./services/contacts";
+import { getEnvVar } from "./utils/getEnvVar.js";
+import { getAllContacts, getContactbyId } from "./services/contacts.js";
 
 dotenv.config();
 
