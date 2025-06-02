@@ -26,7 +26,7 @@ export const authenticate = async (req, res, next) => {
   }
 
   const isSessionTokenExpired =
-    new Date() > new Date(session.accessTokenValiduntil);
+    new Date() > new Date(session.refreshTokenValidUntil);
 
   if (isSessionTokenExpired) {
     next(createHttpError(401, "Access token is expired"));
