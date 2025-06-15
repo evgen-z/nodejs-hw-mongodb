@@ -1,0 +1,11 @@
+tags: 
+  -  Auth
+summary: Logs user out
+operationId: logoutUser
+description: "Deletes current session for user"
+security: []
+responses: 
+  "204":
+    description: "User logged out, current session deleted"
+  "401":
+    $ref: ../../../components/responses/401.yaml

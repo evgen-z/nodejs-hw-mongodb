@@ -1,0 +1,36 @@
+tags: 
+  -  Auth
+summary: Refresh current session
+operationId: refreshSession
+description: "Refreshes current user session"
+security: []
+responses: 
+  "200":
+    description: Session was reset successfully
+    content:
+      application/json:
+        schema: 
+          type: object
+          required:
+            - status
+            - message
+            - data
+          properties:
+            status:
+              type: integer
+              example: 201
+            message:
+              type: string
+              example: User successfully registered!
+            data:
+              type: object
+              properties:
+                accesstoken:
+                  type: string
+                  example: 6820368928e593f4026c6845
+  "401":
+    $ref: ../../../components/responses/401.yaml
+  "500":
+    description: Session is missing userId
+    
+
